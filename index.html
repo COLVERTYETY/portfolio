@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nicolas STAS</title>
+    <link rel="icon" href="assets/icon.png" type="image/x-icon" />
+
+    <!-- Import the css file -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- You can change 0.160.0 to any other availble Three.js version to match your requirements -->
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cannon.js/0.6.2/cannon.js" integrity="sha512-+E0UhA8ib3H5AlREMX1I0mc3R7HMkQYH+hkkfW47aLGMnVJwod+jJ2jxe94xYyUdqPs9AFDHUxKnJzScEP5cmA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <video
+      id="paradim"
+      loop
+      crossOrigin="anonymous"
+      autoplay
+      playsinline
+      muted
+      style="display: none"
+    >
+      <source
+        src="assets/paradim.mp4"
+        type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'
+      />
+    </video>
+    <video
+      id="glove"
+      loop
+      crossOrigin="anonymous"
+      autoplay
+      playsinline
+      muted
+      style="display: none"
+    >
+      <source
+        src="assets/glove.mp4"
+        type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'
+      />
+    </video>
+    <video
+      id="robotarm"
+      loop
+      crossOrigin="anonymous"
+      autoplay
+      playsinline
+      muted
+      style="display: none"
+    >
+      <source
+        src="assets/robotarm.mp4"
+        type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'
+      />
+    </video>
+    <video
+      id="nerf"
+      loop
+      crossOrigin="anonymous"
+      autoplay
+      playsinline
+      muted
+      style="display: none"
+    >
+      <source
+        src="assets/nerf.mp4"
+        type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'
+      />
+    </video>
+    <video
+      id="sdxl"
+      loop
+      crossOrigin="anonymous"
+      autoplay
+      playsinline
+      muted
+      style="display: none"
+    >
+      <source
+        src="assets/sdxl.mp4"
+        type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'
+      />
+    </video>
+    <video
+      id="plant"
+      loop
+      crossOrigin="anonymous"
+      autoplay
+      playsinline
+      muted
+      style="display: none"
+    >
+      <source
+        src="assets/plant.mp4"
+        type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'
+      />
+    </video>
+</head>
+<body>
+  <div id="container">
+    <div id="title">
+        <h1>🤖 Nicolas STAS 🚀</h1>
+        <h2>💻 Creative Technology Engineer 🛠️</h2>
+    </div>
+    <div id="foldaway"> 
+      <p>Welcome to my Portfolio !!</p>
+      <p>Each Box is a Different Project.You can move around to select the different projects and get more info. Click on the box to visit the projects.</p>
+      <p>Press "Enter" to throw the boxes around !!</p>
+      <h3>Contact:</h2>
+      <p>Email: <a href="mailto:nicolas.jan.stas@gmail.com">nicolas.jan.stas@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/nicolas-stas/" target="_blank">nicolas-stas/</a></p>
+      <p>GitHub: <a href="https://github.com/COLVERTYETY" target="_blank">COLVERTYETY</a></p>
+      <p>DVIC: <a href="https://dvic.devinci.fr/member/nicolas-stas" target="_blank">DeVinci Innovation Center</a></p>
+    </div>
+  </div>
+    <canvas id="canvas"></canvas>
+    <script type="module" src="main.js"></script>
+</body>
+</html>

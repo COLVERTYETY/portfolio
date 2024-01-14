@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+head, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+canvas {
+    display: block;
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    width: 100%; /* Ensure it covers the full screen */
+    height: 100%; /* Ensure it covers the full screen */
+}
+
+#title {
+    z-index: 5; /* Ensure it's above the canvas */
+    /* position: absolute; */
+    /* top: 0; Position at the top */
+    /* left: 0; Align to the left */
+    width: fit-content; /* Set the width */
+    margin: 0 auto 5px auto;
+    text-align: center; /* Center the text */
+    color: white; /* Adjust text color as needed */
+}
+
+#title h1, #title h2 {
+    background-color: black; /* Background color for the text */
+    /*display: inline; Make the background only wrap around the text*/
+    width: fit-content;
+    margin: 0 auto;
+    font-size: calc(min(5vw, 2rem));
+}
+
+/* #title:hover #foldaway {*/
+    /*visibility: visible; /* Visible on hover */
+/*} */
+
+body:has(#title:hover) #foldaway {
+    visibility: visible;
+    height: fit-content;
+    padding: 10px;
+}
+
+#foldaway:hover {
+    visibility: visible;
+    height: fit-content;
+    padding: 10px;
+}
+
+#container {
+    z-index: 5; /* Ensure it's above the canvas */
+    position: absolute;
+    top: 0; /* Position at the top */
+    /* left: 50%; Align to the left */ 
+    min-width: 100%; /* Set the width */
+    /* margin: 0 auto; */
+    text-align: center; /* Center the text */
+    color: white; /* Adjust text color as needed */
+}
+
+#foldaway {
+    pointer-events: visible;
+    z-index: 7;
+    width: 100%; /*Set the width*/
+    border: 1px solid rgb(0,255,255);
+    background-color: black; /*Background color */
+    visibility: hidden;
+    margin: 0 auto;
+    text-align: center;
+    width: fit-content;
+    padding: 0px;
+    /* opacity: 0.8; */
+    border-radius: 5px;
+    height: 0;
+}
+
+#foldaway h3 {
+    width: fit-content;
+    text-align: center;
+    margin: 0 auto;
+    /* color: lightblue; */
+    font-size: 2.4vmin;
+}
+
+#foldaway p {
+    width: fit-content;
+    max-width: 50vmin;
+    text-align: center;
+    margin: 0 auto;
+    color: white;
+    font-size: 2.4vmin;
+}
+
+#foldaway a {
+    color: rgb(0,255,255);
+    text-decoration: none;
+    font-size: 2.4vmin;
+}
+
+.htmlmsg {
+    z-index: 2 !important;
+    pointer-events: none;
+    border: 1px solid rgb(0,255,255); /* Electric blue border */
+    padding: 10px;
+    background-color: black; /* Black background */
+    color: white; /* White text color */
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+    text-align: center; /* Center text */
+    opacity: 0.6;
+  }
+  
+.htmlmsg h1 {
+margin: 0;
+font-size: 2.4vmin; /* Larger font size for h1 */
+}
+
+.htmlmsg h2 {
+margin: 0;
+font-size: 2.0vmin; /* Regular font size for h2 */
+}
