@@ -200,6 +200,8 @@ const glass_material = new THREE.MeshPhysicalMaterial({
 });
 
 // add a physics cube
+const video_birdmesh = document.getElementById("birdmesh");
+video_birdmesh.play();
 const video_robotarm = document.getElementById("robotarm");
 video_robotarm.play();
 const robotarm = new THREE.VideoTexture(video_robotarm);
@@ -221,6 +223,12 @@ const plant = new THREE.VideoTexture(Video_plant);
 // console.log(video_nerf, nerf);
 const image_me = new THREE.TextureLoader().load('assets/me.jpeg');
 
+const Box_birdmesh = new BOX(world, scene, 0, 10, 4, "birdmesh",video_birdmesh);
+Box_birdmesh.body.angularVelocity.set(0, 1, 0);
+const birdmesh_toplabel = mylabel("Bird Mesh", "birds are evasive creatures, how can we track them?");
+const birdmesh_bottomlabel = mylabel("2024", "a cool LoRaMesh Network to track birds and other noisy creatures.");
+Box_birdmesh.toplabel = birdmesh_toplabel;
+Box_birdmesh.bottomlabel = birdmesh_bottomlabel;
 const Box_paradim = new BOX(world, scene, 0, 5, 4, "paradigm",paradim);
 Box_paradim.body.angularVelocity.set(0.0, 0, 0);
 const paradigm_toplabel = mylabel("Perception Paradigms", "The Mathematical Abstractions used to reprsent the world are critical in robotics.");
@@ -278,7 +286,7 @@ scene.add(plant_toplabel);
 scene.add(plant_bottomlabel);
 Box_plant.body.angularVelocity.set(1, 0, 2);
 
-let Boxes = [Box_paradim, Box_nerf, Box_robotarm, Box_glove, Box_me, Box_sdxl, Box_plant];
+let Boxes = [Box_paradim, Box_nerf, Box_robotarm, Box_glove, Box_me, Box_sdxl, Box_plant, Box_birdmesh];
 
 // reset the boxes when enter is pressed
 document.addEventListener("keydown", function (event) {
